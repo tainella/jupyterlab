@@ -6,27 +6,27 @@ build-backend = "jupyter_packaging.build_api"
 file="LICENSE"
 
 [tool.poetry] 
-name = "custom_jupyter_LAB-plugin"
-version = "1.0.0"
+name = "myjupyterlab"
+version = "3.5.1"
 description = ""
 authors = ["mai"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+tornado = "^6.2"
+tensorboard= "^2.2"
 nbclassic = { git = "https://github.com/tainella/nbclassic.git" }
-notebook = { git = "https://github.com/tainella/notebook.git" }
 jupyter-tensorboard = { version = "^0.2.0", optional = true }
 jupyterlab-system-monitor = { version = "^0.8.0", optional = true }
 jupyterlab-git = { version = "^0.40.1", optional = true }
 lckr-jupyterlab-variableinspector = { version = "^3.0.9", optional = true }
-jupyterlab_voyager = { version = "^1.0.0", optional = true }
+jupyterlab = "^3.5.1"
 
 [tool.poetry.extras] 
 jupyter-tensorboard = ["jupyter-tensorboard"]
 jupyterlab-system-monitor = ["jupyterlab-system-monitor"]
 jupyterlab-git = ["jupyterlab-git"]
 lckr-jupyterlab-variableinspector = ["lckr-jupyterlab-variableinspector"]
-jupyterlab_voyager = ["jupyterlab_voyager"]
 
 [tool.jupyter-packaging.builder]
 factory = "jupyter_packaging.npm_builder"
